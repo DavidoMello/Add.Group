@@ -9,9 +9,9 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # CONFIGURAÇÕES
 # ========================
 ZABBIX_URL = "https://10.115.0.199/api_jsonrpc.php"
-API_TOKEN = "c462e83af75dc4c78df4bbb19db6e8cb017c6917b964add4c308a86c6f210b60"
-GROUP_NAME = "SAP/DEV"
-CSV_FILE = "DEV.csv"
+API_TOKEN = "SUA API"
+GROUP_NAME = "GRUPO ONDE O HOST VAI SER ADICIONADO"
+CSV_FILE = "AQUIVO ONDE ESTÁ OS HOSTS .csv"
 
 HEADERS = {
     "Content-Type": "application/json-rpc"
@@ -46,6 +46,7 @@ def zabbix_api(method, params):
 
 # ========================
 # FUNÇÕES ZABBIX
+# Na tabela o nome da coluna deve ser "hostname"
 # ========================
 def get_group_id():
     result = zabbix_api(
